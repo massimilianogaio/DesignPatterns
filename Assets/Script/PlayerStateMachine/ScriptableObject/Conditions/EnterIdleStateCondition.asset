@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536bbfb1a83597f4b8c2dc9fdf1619d4, type: 3}
+  m_Name: EnterIdleStateCondition
+  m_EditorClassIdentifier: 
+  compatiblesStates:
+  - {fileID: 11400000, guid: bf8268dac435f2646912e0de2dfdee51, type: 2}
+  - {fileID: 11400000, guid: 92f650aa922a7e3429fd6d09efc4a230, type: 2}
