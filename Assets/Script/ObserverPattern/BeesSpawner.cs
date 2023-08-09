@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DesignPatterns.Observer
 {
-    public class BeesSpawner : MonoBehaviour, IObserver
+    public class BeesSpawner : MonoBehaviour, IClickControllerObserver
     {
         [SerializeField] private GameObject _beePrefab;
         [SerializeField] private int _initialNumOfBees = 3;
@@ -18,29 +18,23 @@ namespace DesignPatterns.Observer
                 SpawnBee();
             }
 
-            _clickController.OnColliderClicked += OnColliderClicked;
+            _clickController.OnColliderClicked += UpdateObserverState;
         }
 
         private void OnDestroy()
         {
-            _clickController.OnColliderClicked -= OnColliderClicked;
+            _clickController.OnColliderClicked -= UpdateObserverState;
         }
 
         private void SpawnBee()
         {
             Vector3 spawnPosition = _camera.transform.position + _camera.transform.forward * spawnDistance;
             var go = Instantiate(_beePrefab, spawnPosition, Quaternion.identity);
-            go.GetComponent<BeeColliderHandler>().Init(_clickController);
         }
-        private void OnColliderClicked(Collider colliderClicked)
+        public void UpdateObserverState(Collider colliderClicked)
         {
             if (colliderClicked.GetComponent<BeeColliderHandler>())
-                UpdateObserverState();
-        }
-
-        public void UpdateObserverState()
-        {
-            SpawnBee();
+                SpawnBee();
         }
     }
 }

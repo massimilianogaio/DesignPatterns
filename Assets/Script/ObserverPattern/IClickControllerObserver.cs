@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace DesignPatterns.Observer
 {
-    public interface IObserver
+    public interface IClickControllerObserver
     {
-        void UpdateObserverState();
+        void UpdateObserverState(Collider collider);
     }
 }
