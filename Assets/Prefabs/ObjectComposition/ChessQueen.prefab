@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5185646566429284634}
   - component: {fileID: 5185646566429284635}
   - component: {fileID: 5185646566429284632}
+  - component: {fileID: 1299263987506655729}
   - component: {fileID: 5185646566429284629}
   m_Layer: 0
   m_Name: ChessQueen
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fb86086a6603d4f8dcc4bb682b76b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chessAspect: {fileID: 0}
   _chessMovements:
   - {fileID: 5185646566429284632}
   - {fileID: 5185646566429284635}
@@ -75,6 +77,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9d7d326c0445e4eb983db311712d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1299263987506655729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5185646566429284638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ea9e09ac5301245a5bbd78b0edd51a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelRenderer: {fileID: 5185646565995813857}
+  modeMaterial: {fileID: 2100000, guid: c4016e23c29164b4f8ce00e6bbf3ba4c, type: 2}
 --- !u!65 &5185646566429284629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -148,5 +164,10 @@ PrefabInstance:
 --- !u!4 &5185646565993365245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 447096, guid: 6f38c700bedefe64f8364436528e5c3d, type: 3}
+  m_PrefabInstance: {fileID: 5185646565993540741}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &5185646565995813857 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2324324, guid: 6f38c700bedefe64f8364436528e5c3d, type: 3}
   m_PrefabInstance: {fileID: 5185646565993540741}
   m_PrefabAsset: {fileID: 0}

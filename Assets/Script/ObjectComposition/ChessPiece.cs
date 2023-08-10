@@ -6,12 +6,15 @@ namespace DesignPatterns.ObjectComposition
 {
     public class ChessPiece : MonoBehaviour
     {
+        [SerializeField] private ChessAspect? _chessAspect;
         [SerializeField] private List<ChessMovement> _chessMovements;
         private Camera _camera;
 
         void Awake()
         {
             _camera = Camera.main;
+            
+            _chessAspect?.SetChessAspect();
         }
 
         void Update()

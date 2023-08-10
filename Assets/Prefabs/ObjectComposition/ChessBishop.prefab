@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4167696162095987618}
   - component: {fileID: 4167696162095987621}
   - component: {fileID: 4167696162095987620}
+  - component: {fileID: 764743147208636166}
   - component: {fileID: 4167696162095987623}
   - component: {fileID: 4167696162095987619}
   m_Layer: 0
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fb86086a6603d4f8dcc4bb682b76b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chessAspect: {fileID: 764743147208636166}
   _chessMovements:
   - {fileID: 4167696162095987620}
 --- !u!114 &4167696162095987620
@@ -62,6 +64,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2610b14ecad7d68418ff512872b89410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &764743147208636166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167696162095987622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ea9e09ac5301245a5bbd78b0edd51a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelRenderer: {fileID: 4167696161220686229}
+  modeMaterial: {fileID: 2100000, guid: df1b4fbdee8f0364b9d3cb29e9e48df6, type: 2}
 --- !u!65 &4167696162095987623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -148,6 +164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
+--- !u!23 &4167696161220686229 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2380346, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
+  m_PrefabInstance: {fileID: 4167696161223025583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4167696161222924223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 439312, guid: cd05c23b470229c44a8d53d6e86225f6, type: 3}
