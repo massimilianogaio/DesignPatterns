@@ -6,7 +6,9 @@ namespace DesignPatterns.ObjectComposition
 {
     public class ChessPiece : MonoBehaviour
     {
+#nullable enable
         [SerializeField] private ChessAspect? _chessAspect;
+#nullable disable
         [SerializeField] private List<ChessMovement> _chessMovements;
         private Camera _camera;
 
