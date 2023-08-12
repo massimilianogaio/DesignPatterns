@@ -5,6 +5,7 @@ namespace DesignPatterns.ObjectComposition
 {
     public class ChessDiagonalMovement : ChessMovement
     {
+        #region Override Methods
         protected override Vector3 CalculatePawnPosition(Transform pawn)
         {
              return new Vector3(
@@ -13,5 +14,6 @@ namespace DesignPatterns.ObjectComposition
                     Mathf.Min(pawn.transform.position.z + singleMovementDelta, maxBoardRangeZ)
                 );
         }
+        #endregion
     }
 }

@@ -6,32 +6,26 @@ namespace DesignPatterns.ObjectComposition
 {
     public class ChessPiece : MonoBehaviour
     {
+        #region Variables
+        [Header("Compositions features")]
 #nullable enable
         [SerializeField] private ChessAspect? _chessAspect;
 #nullable disable
         [SerializeField] private List<ChessMovement> _chessMovements;
-        private Camera _camera;
-
+        #endregion
+        #region MonoBehaviour Methods
         void Awake()
-        {
-            _camera = Camera.main;
-            
+        {   
             _chessAspect?.SetChessAspect();
+            RaycastHandler.Instance.OnColliderClicked += OnColliderClicked;
         }
 
-        void Update()
+        private void OnDestroy()
         {
-            if (!Input.GetMouseButtonDown(0)) return;
-            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-                if (hit.collider.transform == transform)
-                {
-                    MoveChessPiece();
-                }
-            }
+            RaycastHandler.Instance.OnColliderClicked -= OnColliderClicked;
         }
+        #endregion
+        #region Private Methods
         private void MoveChessPiece()
         {
             foreach(var move in _chessMovements)
@@ -42,5 +36,15 @@ namespace DesignPatterns.ObjectComposition
                     return;
             }
         }
+        #endregion
+        #region Listeners Methods
+        private void OnColliderClicked(Collider collider)
+        {
+            if (collider.transform == transform)
+            {
+                MoveChessPiece();
+            }
+        }
+        #endregion
     }
 }

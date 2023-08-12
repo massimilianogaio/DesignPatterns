@@ -6,7 +6,14 @@ namespace DesignPatterns.Strategy
 {
     public class InsertionSort : SortingStrategy
     {
+        #region Override Methods
         protected override void PerformSorting()
+        {
+            InsertionSortAlgorithm(diceSideInfos);
+        }
+        #endregion
+        #region Private Methods
+        private void InsertionSortAlgorithm(List<DiceSideInfo> diceSideInfos)
         {
             for (int i = 0; i < diceSideInfos.Count() - 1; i++)
             {
@@ -16,12 +23,13 @@ namespace DesignPatterns.Strategy
                     {
                         diceMovementController.EnqueueSwap(diceSideInfos[j - 1].DiceTransform, diceSideInfos[j].DiceTransform);
 
-                        DiceSideInfo temp = diceSideInfos[j - 1];
+                        var temp = diceSideInfos[j - 1];
                         diceSideInfos[j - 1] = diceSideInfos[j];
                         diceSideInfos[j] = temp;
                     }
                 }
             }
         }
+        #endregion
     }
 }

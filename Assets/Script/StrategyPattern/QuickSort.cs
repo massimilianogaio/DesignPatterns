@@ -6,12 +6,23 @@ namespace DesignPatterns.Strategy
 {
     public class QuickSort : SortingStrategy
     {
+        #region Override Methods
         protected override void PerformSorting()
         {
-            QuickSortFunction(diceSideInfos, 0, diceSideInfos.Count() - 1);
-            var a = diceSideInfos;
+            QuickSortAlgorithm(diceSideInfos, 0, diceSideInfos.Count() - 1);
         }
+        #endregion
+        #region Private Methods
+        private void QuickSortAlgorithm(List<DiceSideInfo> diceSideInfos, int low, int high)
+        {
+            if (low < high)
+            {
+                int pi = Partition(diceSideInfos, low, high);
 
+                QuickSortAlgorithm(diceSideInfos, low, pi - 1);
+                QuickSortAlgorithm(diceSideInfos, pi + 1, high);
+            }
+        }
         private int Partition(List<DiceSideInfo> diceSideInfos, int low, int high)
         {
             int pivot = diceSideInfos[high].DotNumber;
@@ -38,21 +49,6 @@ namespace DesignPatterns.Strategy
 
             return i + 1;
         }
-
-        private void QuickSortFunction(List<DiceSideInfo> diceSideInfos, int low, int high)
-        {
-            if (low < high)
-            {
-                int pi = Partition(diceSideInfos, low, high);
-
-                QuickSortFunction(diceSideInfos, low, pi - 1);
-                QuickSortFunction(diceSideInfos, pi + 1, high);
-            }
-        }
-
-        private void QuickSortAlgorithm(List<DiceSideInfo> diceSideInfos)
-        {
-            QuickSortFunction(diceSideInfos, 0, diceSideInfos.Count() - 1);
-        }
+        #endregion
     }
 }

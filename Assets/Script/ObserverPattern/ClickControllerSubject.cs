@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 namespace DesignPatterns.Observer
 {
     public class ClickControllerSubject : MonoBehaviour, ISubject
@@ -16,7 +18,7 @@ namespace DesignPatterns.Observer
 
         private void Update()
         {
-            if (!Input.GetMouseButtonDown(0)) return;
+            if (!Mouse.current.leftButton.wasPressedThisFrame) return;
 
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;

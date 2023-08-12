@@ -7,12 +7,13 @@ namespace DesignPatterns.Strategy
 {
     public class BubbleSort : SortingStrategy
     {
+        #region Override Methods
         protected override void PerformSorting()
         {
             BubbleSortAlgorithm(diceSideInfos);
-            var a = diceSideInfos;
         }
-
+        #endregion
+        #region Private Methods
         private void BubbleSortAlgorithm(List<DiceSideInfo> diceSideInfos)
         {
             int n = diceSideInfos.Count();
@@ -27,6 +28,7 @@ namespace DesignPatterns.Strategy
                     if (diceSideInfos[j].DotNumber > diceSideInfos[j + 1].DotNumber)
                     {
                         diceMovementController.EnqueueSwap(diceSideInfos[j].DiceTransform, diceSideInfos[j + 1].DiceTransform);
+                        
                         var temp = diceSideInfos[j];
                         diceSideInfos[j] = diceSideInfos[j + 1];
                         diceSideInfos[j + 1] = temp;
@@ -37,5 +39,6 @@ namespace DesignPatterns.Strategy
                     break;
             }
         }
+        #endregion
     }
 }

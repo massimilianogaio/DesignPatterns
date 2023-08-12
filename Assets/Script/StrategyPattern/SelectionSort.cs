@@ -6,10 +6,13 @@ namespace DesignPatterns.Strategy
 {
     public class SelectionSort : SortingStrategy
     {
+        #region Override Methods
         protected override void PerformSorting()
         {
             SelectionSortAlgorithm(diceSideInfos);
         }
+        #endregion
+        #region Private Methods
         private void SelectionSortAlgorithm(List<DiceSideInfo> diceSideInfos)
         {
             var arrayLength = diceSideInfos.Count();
@@ -29,5 +32,6 @@ namespace DesignPatterns.Strategy
                 diceSideInfos[i] = tempVar;
             }
         }
+        #endregion
     }
 }

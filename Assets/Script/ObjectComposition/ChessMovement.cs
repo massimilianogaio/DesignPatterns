@@ -5,10 +5,15 @@ namespace DesignPatterns.ObjectComposition
 {
     public abstract class ChessMovement : MonoBehaviour
     {
+        #region Variables
         protected float maxBoardRangeX = 6f;
         protected float maxBoardRangeZ = 10f;
         protected float singleMovementDelta = 1.5f;
-
+        #endregion
+        #region Abstract Methods
+        protected abstract Vector3 CalculatePawnPosition(Transform pawn);
+        #endregion
+        #region Public Methods
         public bool MoveChessPawn(Transform pawn)
         {
             if (HasReachedBoardLimit(pawn.transform.position)) return false;
@@ -26,7 +31,8 @@ namespace DesignPatterns.ObjectComposition
             }     
             
         }
-        protected abstract Vector3 CalculatePawnPosition(Transform pawn);
+        #endregion
+        #region Protected Methods
         protected bool HasReachedBoardLimit(Vector3 position)
         {
             return position.x + singleMovementDelta > maxBoardRangeX && position.z + singleMovementDelta > maxBoardRangeZ;
@@ -35,6 +41,7 @@ namespace DesignPatterns.ObjectComposition
         {
             return Physics.OverlapSphere(position, 0.1f).Length == 0;
         }
-        
+        #endregion
+
     }
 }

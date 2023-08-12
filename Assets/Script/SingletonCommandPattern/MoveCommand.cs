@@ -5,9 +5,13 @@ namespace DesignPatterns.SingletonCommandManger
 {
     public class MoveCommand : ICommand
     {
+        #region Variables
         private Transform _transformToMove;
         private Vector3 _previousPosition;
         private Vector3 _nextPosition;
+        #endregion
+
+        #region Public Methods
         public MoveCommand(Transform transformToMove, Vector3 previousPosition, Vector3 nextPosition)
         {
             _transformToMove = transformToMove;
@@ -23,5 +27,6 @@ namespace DesignPatterns.SingletonCommandManger
         {
             _transformToMove.position = _previousPosition;
         }
+        #endregion
     }
 }

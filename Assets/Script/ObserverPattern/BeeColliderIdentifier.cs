@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace DesignPatterns.Observer
 {
-    public class BeeColliderHandler : MonoBehaviour
+    public class BeeColliderIdentifier : MonoBehaviour
     { 
     }
 }

@@ -6,10 +6,13 @@ namespace DesignPatterns.SingletonCommandManger
 {
     public sealed class CommandManager
     {
+        #region Variables
         private Stack<ICommand> _commandsBuffer = new Stack<ICommand>();
 
         private CommandManager() { }
         private static CommandManager instance = null;
+        #endregion
+        #region Singleton Constructor
         public static CommandManager Instance
         {
             get
@@ -21,19 +24,14 @@ namespace DesignPatterns.SingletonCommandManger
                 return instance;
             }
         }
+        #endregion
+        #region Public Methods
         public void PushCommand(ICommand command)
         {
             command.Execute();
             _commandsBuffer.Push(command);
         }
-        // TODO?
-        //public void Rewind()
-        //{
-        //    while (_commandsBuffer.Count > 0)
-        //    {
-        //        PopCommand();
-        //    }
-        //}
+
         public void PopCommand()
         {
             if (_commandsBuffer.Count == 0)
@@ -42,5 +40,6 @@ namespace DesignPatterns.SingletonCommandManger
             _commandsBuffer.Pop().Undo();
   
         }
+        #endregion
     }
 }

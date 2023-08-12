@@ -6,11 +6,12 @@ namespace DesignPatterns.Observer
 {
     public class ClickControllerObserver : MonoBehaviour, IClickControllerObserver
     {
+        #region Variables
         [SerializeField] private ClickControllerSubject _clickControllerSubject;
-
+        #endregion
+        #region MonoBehaviour Methods
         public void Start()
         {
-
             _clickControllerSubject.OnColliderClicked += UpdateObserverState;
         }
 
@@ -18,12 +19,15 @@ namespace DesignPatterns.Observer
         {
             _clickControllerSubject.OnColliderClicked -= UpdateObserverState;
         }
+        #endregion
+        #region Interface Override Methods
         public void UpdateObserverState(Collider colliderClicked)
         {
-            if(colliderClicked.TryGetComponent<BeeColliderHandler>(out var beeCollider))
+            if(colliderClicked.TryGetComponent<BeeColliderIdentifier>(out var beeCollider))
             {
                 Destroy(beeCollider.gameObject);
             }
         }
+        #endregion
     }
 }

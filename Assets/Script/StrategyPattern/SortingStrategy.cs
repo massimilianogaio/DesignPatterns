@@ -6,32 +6,38 @@ namespace DesignPatterns.Strategy
 {
     public abstract class SortingStrategy : MonoBehaviour
     {
-        protected DiceMovementController diceMovementController;
-
+        #region Variables
         protected struct DiceSideInfo
         {
             public int DotNumber;
             public Transform DiceTransform;
         }
+
+        protected DiceMovementController diceMovementController;
         protected List<DiceSideInfo> diceSideInfos;
-        private void Awake()
+        #endregion
+
+        #region Abstract Method
+        protected abstract void PerformSorting();
+        #endregion
+        #region Public Methods
+        public void SortDice(List<DiceSide> diceSides)
+        {
+            InitSortingStrategy(diceSides);
+            PerformSorting();
+        }
+        #endregion
+        #region Private Methods
+        private void InitSortingStrategy(List<DiceSide> diceSides)
         {
             diceMovementController = gameObject.AddComponent<DiceMovementController>();
-        }
-
-        private void SetDiceInfos(List<DiceSide> diceSides)
-        {
             diceSideInfos = new List<DiceSideInfo>();
             foreach (var side in diceSides)
             {
                 diceSideInfos.Add(new DiceSideInfo { DotNumber = side.DotNumber, DiceTransform = side.transform}); 
             }
         }
-        public void SortDice(List<DiceSide> diceSides)
-        {
-            SetDiceInfos(diceSides);
-            PerformSorting();
-        }
-        protected abstract void PerformSorting();
+        #endregion
+
     }
 }

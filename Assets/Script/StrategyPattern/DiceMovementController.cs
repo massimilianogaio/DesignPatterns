@@ -5,9 +5,11 @@ namespace DesignPatterns.Strategy
 {
     public class DiceMovementController : MonoBehaviour
     {
+        #region Variables
         private readonly Queue<IEnumerator> _queue = new Queue<IEnumerator>();
         private bool _isRunning;
-
+        #endregion
+        #region Public Methods
         public void EnqueueSwap(Transform t1, Transform t2)
         {
             _queue.Enqueue(SwapDiceTransforms(t1, t2));
@@ -16,9 +18,10 @@ namespace DesignPatterns.Strategy
                 StartCoroutine(DoNext());
             }
         }
+        #endregion
+        #region Private Methods
         private IEnumerator DoNext()
         {
-            // if queue is empty, do nothing.
             if (_queue.Count == 0)
                 yield break;
 
@@ -29,7 +32,8 @@ namespace DesignPatterns.Strategy
             _isRunning = false;
             StartCoroutine(DoNext());
         }
-        public IEnumerator SwapDiceTransforms(Transform transform1, Transform transform2)
+        
+        private IEnumerator SwapDiceTransforms(Transform transform1, Transform transform2)
         {
             var elapsedTime = 0f;
             var duration = 1f;
@@ -47,5 +51,6 @@ namespace DesignPatterns.Strategy
                 yield return null;
             }
         }
+        #endregion
     }
 }

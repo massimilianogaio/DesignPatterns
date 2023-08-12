@@ -5,13 +5,17 @@ namespace DesignPatterns.Observer
 {
     public class BeeMovement : MonoBehaviour
     {
+        #region Variable
+        [Header("Movement settings")]
         [SerializeField] private float _moveSpeed = 2f;
         [SerializeField] private float _maxDeviation = 2f;
         [SerializeField] private float _distance = 5f;
-
+        
         private Vector3 targetPosition;
         private Camera _camera;
+        #endregion
 
+        #region MonoBehaviour Methods
         void Awake()
         {
             _camera = Camera.main;
@@ -25,8 +29,9 @@ namespace DesignPatterns.Observer
         {
             MoveBee();
         }
-
-        void MoveBee()
+        #endregion
+        #region Private Methods
+        private void MoveBee()
         {
             Vector3 direction = targetPosition - transform.position;
             transform.Translate(direction.normalized * _moveSpeed * Time.deltaTime);
@@ -37,10 +42,11 @@ namespace DesignPatterns.Observer
             }
         }
 
-        Vector3 GetRandomDeviation()
+        private Vector3 GetRandomDeviation()
         {
             Vector3 deviation = new Vector3(Random.Range(-_maxDeviation, _maxDeviation), Random.Range(-_maxDeviation, _maxDeviation), 0f);
             return _camera.transform.position + _camera.transform.forward * _distance + deviation;
         }
+        #endregion
     }
 }

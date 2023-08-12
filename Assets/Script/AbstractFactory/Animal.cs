@@ -5,8 +5,12 @@ namespace DesignPatterns.AbstractFactory
 {
     public class Animal : MonoBehaviour, IAnimal
     {
+        #region Variables
+        [Header("Transform settings")]
         [SerializeField] private Vector3 _instantiationPosition;
         [SerializeField] private Quaternion _instantiationRotation;
+        #endregion
+        #region Public Methods
         public Vector3 GetInstantiationPosition()
         {
             return _instantiationPosition;
@@ -16,5 +20,6 @@ namespace DesignPatterns.AbstractFactory
         {
             return _instantiationRotation;
         }
+        #endregion
     }
 }
