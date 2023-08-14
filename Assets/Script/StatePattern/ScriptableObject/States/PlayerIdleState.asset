@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnterCondition: {fileID: 11400000, guid: e2932715dde6df9428714481872ac89a, type: 2}
   ExitCondition: {fileID: 11400000, guid: 266659e5806c16e4fb92c83de22f801c, type: 2}
-  _turnSpeed: 10
+  _rotationSpeed: 150

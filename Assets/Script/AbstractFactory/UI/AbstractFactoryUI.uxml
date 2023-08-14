@@ -1,9 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Label text="Press the buttons to use the two concrete factories" display-tooltip-when-elided="true" style="-unity-font-style: bold; color: rgba(255, 255, 255, 255);" />
+    <ui:Label text="Press the buttons to use the two concrete factories" display-tooltip-when-elided="true" style="-unity-font-style: bold; color: rgb(255, 255, 255);" />
     <ui:VisualElement name="Container" style="flex-direction: row;">
-        <ui:Button text="Wild Two Legs Animal" display-tooltip-when-elided="true" name="WildTwoLegsAnimal" />
-        <ui:Button text="Wild Four Legs Animal" display-tooltip-when-elided="true" name="WildFourLegsAnimal" />
-        <ui:Button text="Domestic Two Legs Animal" display-tooltip-when-elided="true" name="DomesticTwoLegsAnimal" />
-        <ui:Button text="Domestic Four Legs Animal" display-tooltip-when-elided="true" name="DomesticFourLegsAnimal" />
+        <ui:Button text="Wild two-legged Animal" display-tooltip-when-elided="true" name="WildTwoLegsAnimal" />
+        <ui:Button text="Wild four-legged Animal" display-tooltip-when-elided="true" name="WildFourLegsAnimal" />
+        <ui:Button text="Domestic two-legged Animal" display-tooltip-when-elided="true" name="DomesticTwoLegsAnimal" />
+        <ui:Button text="Domestic four-legged Animal" display-tooltip-when-elided="true" name="DomesticFourLegsAnimal" />
     </ui:VisualElement>
 </ui:UXML>

@@ -15,3 +15,4 @@ MonoBehaviour:
   EnterCondition: {fileID: 11400000, guid: 99910c030b7972048a90068b8e502521, type: 2}
   ExitCondition: {fileID: 11400000, guid: 248f7faa59f1f2942826fae54e6c82f1, type: 2}
   _moveSpeed: 10
+  _rotationSpeed: 200
