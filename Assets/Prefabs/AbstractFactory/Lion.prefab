@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668213c206c259643a17bf7fadf1ae04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _instantiationPosition: {x: 0, y: 1, z: 0}
+  _instantiationPosition: {x: -1, y: 1, z: 0}
   _instantiationRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &5919634024159927474
 PrefabInstance:
@@ -114,7 +114,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114412009841591444, guid: d2edcf95960b81249bf3f4a30ad1a908, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d2edcf95960b81249bf3f4a30ad1a908, type: 3}
 --- !u!4 &5924371142301222028 stripped
 Transform:
