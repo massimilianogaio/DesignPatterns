@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DesignPatterns.Strategy
+namespace DesignPatterns.StrategyPatternFactoryMethod
 {
     public class DiceSide : MonoBehaviour
     {

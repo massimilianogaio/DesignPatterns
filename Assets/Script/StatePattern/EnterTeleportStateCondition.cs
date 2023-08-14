@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace DesignPatterns.StateMachine
+namespace DesignPatterns.StatePattern
 {
     [CreateAssetMenu(fileName = "PlayerTeleportStateCondition", menuName = "ScriptableObjects/new PlayerTeleportStateCondition")]
     public class EnterTeleportStateCondition : PlayerStateMachineCondition

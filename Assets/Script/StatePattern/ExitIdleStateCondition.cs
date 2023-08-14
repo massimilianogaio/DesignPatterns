@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace DesignPatterns.StateMachine
+namespace DesignPatterns.StatePattern
 {
     [CreateAssetMenu(fileName = "ExitIdleStateCondition", menuName = "ScriptableObjects/new ExitIdleStateCondition")]
     public class ExitIdleStateCondition : PlayerStateMachineCondition

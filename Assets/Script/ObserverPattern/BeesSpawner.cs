@@ -10,6 +10,7 @@ namespace DesignPatterns.Observer
         [SerializeField] private GameObject _beePrefab;
         [SerializeField] private int _initialNumOfBees = 3;
         [SerializeField] private float spawnDistance = 5f;
+        [SerializeField] private float _maxDeviationSpawnDistance = 3f;
         [SerializeField] private ClickControllerSubject _clickController;
         private Camera _camera;
         #endregion
@@ -33,7 +34,12 @@ namespace DesignPatterns.Observer
         #region Private Methods
         private void SpawnBee()
         {
-            Vector3 spawnPosition = _camera.transform.position + _camera.transform.forward * spawnDistance;
+            var initialPosition = new Vector3(
+                UnityEngine.Random.Range(_camera.transform.position.x - _maxDeviationSpawnDistance, _camera.transform.position.x + _maxDeviationSpawnDistance),
+                UnityEngine.Random.Range(_camera.transform.position.y - _maxDeviationSpawnDistance, _camera.transform.position.y + _maxDeviationSpawnDistance),
+                _camera.transform.position.z);
+
+            Vector3 spawnPosition = initialPosition + _camera.transform.forward * spawnDistance;
             var go = Instantiate(_beePrefab, spawnPosition, Quaternion.identity);
         }
         #endregion

@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Container">
+        <ui:Label text="Move player to change state (idle, move, teleport)" display-tooltip-when-elided="true" style="-unity-font-style: bold-and-italic; font-size: 14px; white-space: normal;" />
+        <ui:Label text="Move player: WASD or left click on the navemsh" display-tooltip-when-elided="true" name="InstructionMove" style="white-space: normal;" />
+        <ui:Label text="Rotate player: right click + rotate mouse" display-tooltip-when-elided="true" name="InstructionRotate" style="white-space: normal;" />
+        <ui:Label display-tooltip-when-elided="true" name="CurrentState" />
+    </ui:VisualElement>
+</ui:UXML>

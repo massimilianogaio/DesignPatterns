@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace DesignPatterns.StateMachine
+namespace DesignPatterns.StatePattern
 {
     public abstract class PlayerState : ScriptableObject
     {
-        private string ClassName => nameof(PlayerState);
+        protected string ClassName => nameof(PlayerState);
         public PlayerStateMachineCondition EnterCondition;
         public PlayerStateMachineCondition ExitCondition;
 

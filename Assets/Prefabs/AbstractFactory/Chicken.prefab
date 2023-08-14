@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668213c206c259643a17bf7fadf1ae04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _instantiationPosition: {x: 1, y: 0, z: 0}
+  _instantiationPosition: {x: 2, y: 1, z: 0}
   _instantiationRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &7246782723167419772
 PrefabInstance:

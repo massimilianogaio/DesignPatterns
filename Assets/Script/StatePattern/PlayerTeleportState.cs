@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace DesignPatterns.StateMachine
+namespace DesignPatterns.StatePattern
 {
     [CreateAssetMenu(fileName = "PlayerTeleportState", menuName = "ScriptableObjects/new PlayerTeleportState")]
     public class PlayerTeleportState : PlayerState
     {
-        private string ClassName => nameof(PlayerTeleportState);
+        protected new string ClassName => nameof(PlayerTeleportState);
         public override void OnEnter(PlayerStateController playerStateController)
         {
             Debug.Log($"{ClassName}.{nameof(OnEnter)}()");

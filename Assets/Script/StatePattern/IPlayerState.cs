@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DesignPatterns.StateMachine
+namespace DesignPatterns.StatePattern
 {
     public interface IPlayerState
     {

@@ -21,7 +21,10 @@ namespace DesignPatterns.SingletonCommandManger
 
         private void OnDestroy()
         {
-            RaycastHandler.Instance.OnColliderClicked -= OnColliderClicked;
+            if (RaycastHandler.Instance)
+            {
+                RaycastHandler.Instance.OnColliderClicked -= OnColliderClicked;
+            }
         }
         void Update()
         {
@@ -34,7 +37,7 @@ namespace DesignPatterns.SingletonCommandManger
         #endregion
 
         #region Listeners Methods
-        private void OnColliderClicked(Collider collider)
+        private void OnColliderClicked(Collider collider, Vector3 hitPoint)
         {
             if (collider.TryGetComponent<RockCommandDataInfo>(out var rock))
             {

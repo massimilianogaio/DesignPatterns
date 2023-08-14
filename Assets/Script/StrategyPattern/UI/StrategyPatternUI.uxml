@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Container" style="flex-wrap: nowrap; align-items: center; justify-content: space-between; flex-direction: row; width: 90%; left: 5%; height: auto;">
+        <ui:Button text="InsertionSort" display-tooltip-when-elided="true" name="InsertionSort" style="white-space: nowrap; -unity-text-align: middle-center; flex-wrap: wrap; flex-basis: auto; width: auto; align-items: flex-end;" />
+        <ui:Button text="BubbleSort" display-tooltip-when-elided="true" name="BubbleSort" style="flex-wrap: wrap;" />
+        <ui:Button text="SelectionSort" display-tooltip-when-elided="true" name="SelectionSort" style="flex-wrap: wrap;" />
+        <ui:Button text="QuickSort" display-tooltip-when-elided="true" name="QuickSort" style="flex-wrap: wrap;" />
+        <ui:Button text="Reset position" display-tooltip-when-elided="true" name="Reset" enable-rich-text="true" style="flex-wrap: wrap; overflow: visible; align-items: stretch;" />
+    </ui:VisualElement>
+</ui:UXML>

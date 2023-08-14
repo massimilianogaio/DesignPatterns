@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DesignPatterns.StateMachine
+namespace DesignPatterns.StatePattern
 {
     [CreateAssetMenu(fileName = "ExitTeleportStateCondition", menuName = "ScriptableObjects/new ExitTeleportStateCondition")]
     public class ExitTeleportStateCondition : PlayerStateMachineCondition

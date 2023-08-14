@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement>
+        <ui:Label text="Click on a pawn to move it according to the chess rules. \nIf the destination is already busy, movement is disabled." display-tooltip-when-elided="true" style="white-space: normal; color: rgba(255, 255, 255, 255);" />
+    </ui:VisualElement>
+</ui:UXML>

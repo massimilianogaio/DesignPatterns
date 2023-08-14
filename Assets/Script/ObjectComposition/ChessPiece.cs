@@ -22,7 +22,10 @@ namespace DesignPatterns.ObjectComposition
 
         private void OnDestroy()
         {
-            RaycastHandler.Instance.OnColliderClicked -= OnColliderClicked;
+            if (RaycastHandler.Instance)
+            {
+                RaycastHandler.Instance.OnColliderClicked -= OnColliderClicked;
+            }
         }
         #endregion
         #region Private Methods
@@ -38,7 +41,7 @@ namespace DesignPatterns.ObjectComposition
         }
         #endregion
         #region Listeners Methods
-        private void OnColliderClicked(Collider collider)
+        private void OnColliderClicked(Collider collider, Vector3 hitPoint)
         {
             if (collider.transform == transform)
             {
