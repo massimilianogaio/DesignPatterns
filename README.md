@@ -17,9 +17,9 @@ Each pattern is implemented in a different Unity scene with a demo example.
 ### Pattern Goal
 Provide an interface for creating families of related or dependent objects without their concrete classes.
 ### Structure
-![abstractFactoryUML drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/0bf1ef58-ab0a-40ed-af00-2313732910e3)
+![abstractFactoryUML drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/28f42390-83b2-497e-ac05-89c0aa648648)
 ### Demo Scene
-https://github.com/massimilianogaio/DesignPatterns/assets/52246963/6a84e913-2c53-42f3-9c11-f28eb025d7af
+https://github.com/massimilianogaio/DesignPatterns/assets/52246963/096f3ace-88ce-4a66-9ea1-57f6f4f706fa
 
 ## Factory Method Pattern
 ### Pattern Goal
@@ -37,45 +37,45 @@ See Command Pattern Structure section.
 ### Pattern Goal
 Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
 ### Structure
-![command drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/4caff146-9639-4afa-9b14-9501bef6c8e7)
+![command drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/e734339c-f36f-426f-82c6-b9858c01e19e)
 ### Demo Scene
-https://github.com/massimilianogaio/DesignPatterns/assets/52246963/37f424e6-0ab5-4f68-b9b3-b35eeed1dc70
+https://github.com/massimilianogaio/DesignPatterns/assets/52246963/9bda8ff2-da00-490d-b5d8-bba637090318
 
 ## Observer Pattern
 ### Pattern Goal
 Define a one-to-many dependency between objects so that when one object state, all its dependents are notified and updated automatically.
 ### Structure
-![obs drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/a001ce92-2117-432b-b033-9262e48a7c9d)
+![obs drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/a88fbb2c-477e-418f-97d0-3b1827c40d9c)
 
 ### Demo Scene
-https://github.com/massimilianogaio/DesignPatterns/assets/52246963/24be07ad-2699-4e31-b7d4-c5385f04a82f
+https://github.com/massimilianogaio/DesignPatterns/assets/52246963/807f7d09-0745-438a-bcd8-c982753a5b27
 
 ## State Pattern
 ### Pattern Goal
 Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
 ### Structure
-![state drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/50a11e2f-2793-41ee-8958-f7f8919a163e)
+![state drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/fe2c7e90-fd80-4710-b78c-661df96df34b)
 ### Demo Scene
-https://github.com/massimilianogaio/DesignPatterns/assets/52246963/9cea7020-167e-4e76-821a-0420b184b037
+https://github.com/massimilianogaio/DesignPatterns/assets/52246963/a590505b-2176-4fdc-87c7-30dc97a8808e
 
 ## Strategy Pattern
 ### Pattern Goal
 Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
 ### Structure
-![strat](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/a27a61cd-492c-46f9-a988-6608221ebea2)
+![strat](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/ec9d82d2-0101-40b8-bcfc-7fedc6f00a75)
 ### Demo Scene
-https://github.com/massimilianogaio/DesignPatterns/assets/52246963/fa304c1a-1605-4b4e-bfd1-16f22733aff7
+https://github.com/massimilianogaio/DesignPatterns/assets/52246963/15cd7b68-656f-46c0-9320-fe59ffab03af
 
 ## Composition over Inheritance
 ### Pattern Goal
 Building flexible and maintainable software by favoring the assembly of smaller, specialized components over rigidly inheriting behavior from complex parent classes.
 ### Structure
-![oc (1) drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/1e951d1b-8d40-4d55-94ce-659dc39fcebf)
+![oc (1) drawio](https://github.com/massimilianogaio/DesignPatterns/assets/52246963/006d6d95-fefb-49ad-b251-6192512350d4)
+
 ### Demo Scene
-https://github.com/massimilianogaio/DesignPatterns/assets/52246963/6e338940-b125-43ca-8071-b3e4c6f49038
+https://github.com/massimilianogaio/DesignPatterns/assets/52246963/42cf14e9-7b69-4715-b8f6-7a524d2e8098
 
 # Third-party assets
-
 - https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633
 - https://assetstore.unity.com/packages/3d/props/tools/dice-d6-game-ready-pbr-200151#asset_quality
 - https://assetstore.unity.com/packages/3d/props/low-poly-chess-pack-50405
